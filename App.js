@@ -7,10 +7,14 @@ import Navigation from './Components/Navigation/Navigation';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Incomes from './Components/Incomes/Incomes';
 import Expenses from './Components/Expenses/Expenses';
+import {  useGlobalContext } from './context/globalContext';
 
 
 function App() {
   const [active, setActive] = React.useState(1);
+  
+  const global = useGlobalContext()
+  console.log(global);
 
   const displayData = () => {
     switch(active){
